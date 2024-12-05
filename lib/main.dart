@@ -9,10 +9,10 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Product App',
       initialRoute: '/',
       getPages: [
@@ -30,9 +30,9 @@ class HomePage extends StatelessWidget {
     return Center(
       child: ElevatedButton(
         onPressed: () {
-          Get.toNamed('/products',preventDuplicates: false); // Navigate to the ProductListPage
+          Get.toNamed('/products',preventDuplicates: false);
         },
-        child: Text("Product List"),
+        child: Text("Product List With Pagination"),
       ),
     );
   }
